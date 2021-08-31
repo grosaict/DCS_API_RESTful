@@ -1,0 +1,27 @@
+{
+  "name": "apitest",
+  "version": "1.0.0",
+  "description": "Application test",
+  "main": "apitest.js",
+  "scripts": {
+    "start": "node apitest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grosaict/DCS_API_RESTful.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grosaict/DCS_API_RESTful/issues"
+  },
+  "homepage": "https://github.com/grosaict/DCS_API_RESTful",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.3",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {}
+}

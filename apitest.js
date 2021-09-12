@@ -13,9 +13,22 @@ app.use(express.urlencoded( { extended: true } ));
 app.use(cors())
 app.use(morgan('dev'));
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+//DB connect
+mongoose.connect(
+  process.env.DB_CONNECT, 
+  {
+      useNewUrlParser: true,
+      useUnifiedTopology: true/* ,
+      useFindAndModify: false */
+});
+
+//mongoose.set('useCreateIndex', true);
+
+//Importing routes
+const customerRoute       = require('./routes/customer');
+
+//Make routes available
+app.use('/customer',  customerRoute);
 
 const port = process.env.PORT;
 
